@@ -94,4 +94,8 @@
     .footer-bottom-right{
         gap: 12px;
     }
+    .logo{
+        width: 200px;
+        height: 140px;
+    }
 }

@@ -1,4 +1,4 @@
-.hero{
+/* .hero{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -6,7 +6,8 @@
 }
 .profile-img{
     margin-top: 30px;
-    width: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 .hero h1{
@@ -80,6 +81,170 @@
         font-size: 14px;
     }
     .hero-resume{
+        padding: 18px 30px;
+        border-radius: 40px;
+        font-size: 14px;
+    }
+} */
+
+
+/* Hero.css */
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-img {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: scaleIn 1.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero h1 {
+    text-align: center;
+    width: 65%;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.animated-text {
+    display: inline-block;
+    animation: textChange 3s infinite; /* Loop the text change */
+    background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes textChange {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-20px); /* Move up while fading out */
+    }
+}
+
+/* Remaining CSS styles for the component */
+
+.hero p {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    animation: slideUp 2s ease-in-out;
+}
+
+.hero-connect {
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-resume {
+    padding: 20px 55px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-connect:hover,
+.hero-resume:hover {
+    transform: scale(1.05);
+}
+
+.hero-connect:hover {
+    border: 2px solid white;
+}
+
+.hero-resume:hover {
+    border-color: #b415ff;
+}
+
+@media (max-width: 768px) {
+    .profile-img {
+        margin-top: 50px;
+        width: 200px;
+    }
+
+    .hero h1 {
+        margin-top: 10px;
+        width: 90%;
+        font-size: 35px;
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 5px 0px;
+    }
+
+    .hero-action {
+        gap: 10px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .hero-connect {
+        padding: 20px 20px;
+        border-radius: 40px;
+        font-size: 14px;
+    }
+
+    .hero-resume {
         padding: 18px 30px;
         border-radius: 40px;
         font-size: 14px;
