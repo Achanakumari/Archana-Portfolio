@@ -12,10 +12,9 @@ const Hero = () => {
 
     const interval = setInterval(() => {
       setDisplayText(texts[index]);
-      index = (index + 1) % texts.length; // Loop back to the first text
-    }, 3000); // Change text every 3 seconds
-
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+      index = (index + 1) % texts.length; 
+    }, 3000); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
